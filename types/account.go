@@ -1,13 +1,15 @@
 package types
 
 import (
+	"context"
 	"crypto/ed25519"
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"log"
 
-	"github.com/blocto/solana-go-sdk/common"
 	"github.com/mr-tron/base58"
+	"github.com/openweb3-io/solana-go-sdk/common"
 )
 
 var (
@@ -19,6 +21,7 @@ var (
 type Account struct {
 	PublicKey  common.PublicKey
 	PrivateKey ed25519.PrivateKey
+	Signer     Signer
 }
 
 func NewAccount() Account {
@@ -64,6 +67,27 @@ func AccountFromSeed(seed []byte) (Account, error) {
 	return AccountFromBytes(pk)
 }
 
+// AccountFromBase58 generate a account by base58 private key
+func AccountFromSigner(ctx context.Context, signer Signer) (Account, error) {
+	publicKey, err := signer.PublicKey(ctx)
+	if err != nil {
+		return Account{}, err
+	}
+
+	return Account{
+		PublicKey: common.PublicKeyFromBytes(publicKey),
+		Signer:    signer,
+	}, nil
+}
+
 func (a Account) Sign(message []byte) []byte {
+	if a.Signer != nil {
+		output, err := a.Signer.Sign(context.Background(), message)
+		if err != nil {
+			log.Printf("sign error: %v", err)
+		}
+		return output
+	}
+
 	return ed25519.Sign(a.PrivateKey, message)
 }

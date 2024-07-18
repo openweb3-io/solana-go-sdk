@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/blocto/solana-go-sdk/client"
-	"github.com/blocto/solana-go-sdk/common"
-	"github.com/blocto/solana-go-sdk/program/associated_token_account"
-	"github.com/blocto/solana-go-sdk/rpc"
-	"github.com/blocto/solana-go-sdk/types"
+	"github.com/openweb3-io/solana-go-sdk/client"
+	"github.com/openweb3-io/solana-go-sdk/common"
+	"github.com/openweb3-io/solana-go-sdk/program/associated_token_account"
+	"github.com/openweb3-io/solana-go-sdk/rpc"
+	"github.com/openweb3-io/solana-go-sdk/types"
 )
 
 // feeEo6y4CVaGzpxBqU5EyxtkTNUBrgKqkaNgT2mfWqs

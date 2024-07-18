@@ -4,10 +4,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/blocto/solana-go-sdk/common"
-	"github.com/blocto/solana-go-sdk/pkg/pointer"
-	"github.com/blocto/solana-go-sdk/types"
 	"github.com/near/borsh-go"
+	"github.com/openweb3-io/solana-go-sdk/common"
+	"github.com/openweb3-io/solana-go-sdk/pkg/pointer"
+	"github.com/openweb3-io/solana-go-sdk/types"
 	"github.com/stretchr/testify/assert"
 )
 

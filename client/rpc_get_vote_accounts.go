@@ -3,8 +3,8 @@ package client
 import (
 	"context"
 
-	"github.com/blocto/solana-go-sdk/common"
-	"github.com/blocto/solana-go-sdk/rpc"
+	"github.com/openweb3-io/solana-go-sdk/common"
+	"github.com/openweb3-io/solana-go-sdk/rpc"
 )
 
 type VoteAccountStatus struct {

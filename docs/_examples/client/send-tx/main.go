@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/blocto/solana-go-sdk/client"
-	"github.com/blocto/solana-go-sdk/program/system"
-	"github.com/blocto/solana-go-sdk/rpc"
-	"github.com/blocto/solana-go-sdk/types"
+	"github.com/openweb3-io/solana-go-sdk/client"
+	"github.com/openweb3-io/solana-go-sdk/program/system"
+	"github.com/openweb3-io/solana-go-sdk/rpc"
+	"github.com/openweb3-io/solana-go-sdk/types"
 )
 
 // There are many ways you can send tx

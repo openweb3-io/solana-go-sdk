@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"github.com/blocto/solana-go-sdk/rpc"
+	"github.com/openweb3-io/solana-go-sdk/rpc"
 )
 
 type GetSignaturesForAddressConfig struct {
